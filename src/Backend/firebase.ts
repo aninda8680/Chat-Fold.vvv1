@@ -3,13 +3,13 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCUKhhtCuChdNTbEtqc_50iyHHEa_QOlkI",
-    authDomain: "chat-god-65bc8.firebaseapp.com",
-    projectId: "chat-god-65bc8",
-    storageBucket: "chat-god-65bc8.firebasestorage.app",
-    messagingSenderId: "1007601134099",
-    appId: "1:1007601134099:web:4f9ef8480caded4d852de6"
-  };
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+};
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
